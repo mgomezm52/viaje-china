@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Operación China 2027 · 中国行动</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#b00018;--blood:#6e000f;--ink:#0b0b0b;--gold:#f2c200;--paper:#e6d9b8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:Oswald,"Arial Narrow",sans-serif;font-weight:500;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.22;mix-blend-mode:multiply;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
+h1,h2,h3{font-family:"Black Ops One",Anton,Impact,sans-serif;text-transform:uppercase;font-weight:400;margin:0}
+.z{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-weight:900}
+.rays{background:repeating-conic-gradient(from 0deg at 50% 100%,var(--red) 0 5deg,var(--blood) 5deg 10deg)}
+.hud{position:fixed;right:8px;top:calc(env(safe-area-inset-top,0px) + 8px);z-index:60;background:#000d;border:2px solid var(--red);padding:3px 10px;color:var(--gold);font-family:Anton,Impact,sans-serif;letter-spacing:.1em;font-size:17px}
+.hero{position:relative;text-align:center;padding:64px 14px 0;border-bottom:10px solid #000;overflow:hidden}
+.hero .star{font-size:clamp(80px,18vw,170px);color:var(--gold);line-height:1;text-shadow:6px 6px 0 #000}
+.hero h1{font-size:clamp(46px,13vw,130px);color:var(--gold);line-height:.92;text-shadow:6px 6px 0 #000,-2px -2px 0 #000,2px -2px 0 #000;transform:rotate(-2deg);margin:4px 0}
+.hero .slogan{display:inline-block;background:#000;color:var(--paper);padding:6px 18px;font-size:clamp(20px,5vw,40px);border:3px solid var(--gold);margin:10px 0 18px;transform:rotate(1deg)}
+.pill{display:inline-block;background:var(--gold);color:#000;padding:4px 14px;margin:4px;font-family:Anton,Impact,sans-serif;font-size:clamp(14px,3.6vw,22px);letter-spacing:.08em;border:3px solid #000;box-shadow:3px 3px 0 #000}
+.sky{display:block;width:100%;height:auto;margin-top:18px}
+.ticker{background:var(--red);color:var(--paper);border-block:4px solid #000;overflow:hidden;white-space:nowrap;font-family:Anton,Impact,sans-serif;font-size:21px;padding:6px 0}
+.ticker span{display:inline-block;padding-left:100%;animation:t 40s linear infinite}
+@keyframes t{to{transform:translateX(-100%)}}
+section{padding:48px 14px;max-width:1100px;margin:auto}
+h2{font-size:clamp(34px,8.5vw,68px);color:var(--red);text-shadow:3px 3px 0 var(--gold);margin-bottom:4px;transform:rotate(-1deg)}
+.sub{margin:0 0 26px;font-size:18px;color:var(--paper);border-left:6px solid var(--red);padding-left:10px}
+.crew{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:20px}
+.card{background:var(--paper);color:#000;border:4px solid #000;outline:3px solid var(--red);box-shadow:7px 7px 0 var(--red);position:relative;transition:transform .15s}
+.card:nth-child(odd){transform:rotate(-1.2deg)}.card:nth-child(even){transform:rotate(1.1deg)}
+.card:hover{transform:rotate(0) scale(1.05);z-index:2}
+.card .top{background:#000;color:var(--gold);font-family:"Black Ops One",Impact,sans-serif;text-align:center;font-size:17px;letter-spacing:.14em;padding:3px}
+.card .pic{background:repeating-conic-gradient(from 0deg at 50% 100%,var(--gold) 0 7deg,var(--red) 7deg 14deg);border-block:4px solid #000}
+.card svg{display:block;width:100%;height:auto;filter:contrast(1.2)}
+.card .nm{font-family:Anton,Impact,sans-serif;font-size:23px;text-transform:uppercase;padding:6px 8px 0;line-height:1.1;text-align:center}
+.card .st{padding:0 8px 4px;color:var(--red);font-size:18px;letter-spacing:2px;text-align:center}
+.card .bt{background:var(--red);color:var(--paper);text-align:center;font-size:13px;letter-spacing:.12em;padding:3px;text-transform:uppercase}
+.bar{display:flex;border:4px solid var(--gold);margin:0 0 34px;font-family:Anton,Impact,sans-serif;text-align:center;color:#000;overflow:hidden}
+.bar div{padding:10px 2px;font-size:clamp(11px,3vw,20px);border-right:4px solid #000;white-space:nowrap}
+.bar div:last-child{border:0}
+.m{background:#151010;color:var(--paper);border:4px solid var(--red);box-shadow:10px 10px 0 #000,10px 10px 0 2px var(--red);margin-bottom:38px;overflow:hidden}
+.m header{background:var(--red);color:var(--paper);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;padding:10px 16px;border-bottom:5px solid #000}
+.m header h3{font-size:clamp(24px,5.5vw,42px);text-shadow:3px 3px 0 #000}
+.m header .z{font-size:clamp(26px,6vw,44px);color:var(--gold);text-shadow:3px 3px 0 #000}
+.m .meta{display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px 0}
+.m .meta b{background:var(--gold);color:#000;padding:2px 10px;font-family:Anton,Impact,sans-serif;letter-spacing:.06em;font-weight:400;font-size:16px}
+.m p.why{margin:12px 16px;font-size:18px;border-left:6px solid var(--gold);padding-left:10px}
+.m ul{list-style:none;margin:0;padding:6px 16px 16px;display:grid;gap:9px}
+.m li{display:flex;gap:10px;font-size:17px;line-height:1.3;align-items:flex-start}
+.m li i{flex:none;font-style:normal;background:var(--red);color:var(--paper);border:2px solid #000;font-family:Anton,Impact,sans-serif;padding:0 7px;min-width:62px;text-align:center}
+.m .loot{background:#000;border-top:4px solid var(--gold);padding:11px 16px;font-size:16px;color:var(--gold)}
+.m .loot b{font-family:"Black Ops One",Impact,sans-serif;font-weight:400;letter-spacing:.06em}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.tip{background:#151010;border:3px solid var(--red);border-left-width:12px;padding:14px;font-size:17px}
+.tip h4{margin:0 0 6px;font-family:"Black Ops One",Impact,sans-serif;color:var(--gold);font-weight:400;font-size:21px;text-transform:uppercase}
+footer{text-align:center;padding:50px 14px 70px;border-top:10px solid #000}
+footer .big{font-family:"Black Ops One",Impact,sans-serif;text-transform:uppercase;font-size:clamp(40px,11vw,110px);color:var(--gold);text-shadow:5px 5px 0 #000;line-height:1}
+footer p{margin:10px auto;max-width:700px}
+@media(prefers-reduced-motion:reduce){.ticker span{animation:none;padding:0}}
+</style>
+</head>
+<body>
+<div class="hud" aria-hidden="true">★★★★★ BUSCADOS</div>
+
+<header class="hero rays">
+  <div class="star">★</div>
+  <div class="z" style="font-size:clamp(22px,6vw,46px);color:var(--paper);text-shadow:3px 3px 0 #000">团结就是力量</div>
+  <h1>Operación<br>China 2027</h1>
+  <div class="slogan">Nueve camaradas. Cero piedad. Quince días.</div><br>
+  <span class="pill">1–16 JULIO</span><span class="pill">SHANGHÁI</span><span class="pill">ZHANGJIAJIE</span><span class="pill">FURONG</span><span class="pill">CHONGQING</span>
+  <svg class="sky" viewBox="0 0 800 110" preserveAspectRatio="none" aria-hidden="true"><path fill="#000" d="M0 110V70h30V50h20v20h25V30h14V10h6v20h14v45h30V55h24V35h30v40h22V60h28V20h10V0h4v20h10v50h30V45h26v25h30V58h24V40h20v30h34V52h30V25h12v27h22v28h28V62h28v48z"/></svg>
+</header>
+
+<div class="ticker"><span>★ SE BUSCAN NUEVE CAMARADAS POR ATRACO AL HOTPOT ★ EL PARTIDO MANDA, EL ESTÓMAGO OBEDECE ★ PROHIBIDO PERDERSE EN EL METRO DE CHONGQING ★ NADIE SE BAJA DEL COCHE ★ ¡VIVA EL VIAJE! 旅游万岁 ★</span></div>
+
+<section id="crew">
+  <h2>La banda</h2>
+  <p class="sub">Nueve rostros, un solo objetivo. Si les ves, no les mires fijo.</p>
+  <div class="crew" id="crewGrid"></div>
+</section>
+
+<section id="ruta">
+  <h2>Plan de ataque</h2>
+  <p class="sub">Cuatro misiones, quince días. Los días van según lo que da de sí cada plaza.</p>
+  <div class="bar" aria-label="Reparto de días">
+    <div style="flex:3;background:var(--gold)">SHANGHÁI 3</div>
+    <div style="flex:3;background:#c9c9c9">ZHANGJIAJIE 3</div>
+    <div style="flex:2;background:#e07a5f">FURONG 2</div>
+    <div style="flex:7;background:var(--red);color:var(--paper)">CHONGQING 7</div>
+  </div>
+  <div id="missions"></div>
+</section>
+
+<section id="tips">
+  <h2>Equipo</h2>
+  <p class="sub">Lo que se lleva en la mochila.</p>
+  <div class="tips">
+    <div class="tip"><h4>Pasta</h4>Configurad Alipay o WeChat Pay antes de ir con una tarjeta internacional. Llevad algo de efectivo por si acaso.</div>
+    <div class="tip"><h4>Conexión</h4>Contratad eSIM o roaming abierto. Google, WhatsApp e Instagram van bloqueados sin VPN: instalad una antes.</div>
+    <div class="tip"><h4>Papeles</h4>Pasaporte con validez de sobra. Comprobad requisitos de visado y entrada de vuestra nacionalidad cerca de la fecha, que cambian.</div>
+    <div class="tip"><h4>Calor</h4>Julio es sauna, y en Chongqing más. Ropa ligera, chubasquero fino y litros de agua. Reservad online las entradas de Zhangjiajie.</div>
+    <div class="tip"><h4>Transporte</h4>Los traslados entre ciudades son estimados. Cerrad billetes en cuanto salgan a la venta, sobre todo Zhangjiajie, Furong y Chongqing.</div>
+    <div class="tip"><h4>Comida</h4>Chongqing pica de verdad. La primera vez pedid el hotpot «wei la» (poco picante). Luego ya veréis si sois de los duros.</div>
+  </div>
+</section>
+
+<footer class="rays">
+  <div class="big">Misión<br>cumplida</div>
+  <p>Respeto para Marcos, Alejandro FHT, Bobueno, Sandra, Ángela, Pepe, Varo, Jorge y Coexito. Lo que pasa en China se queda en el grupo de WhatsApp.</p>
+  <p class="z" style="font-size:26px;color:var(--gold)">★ 旅游万岁 ★</p>
+</footer>
+
+<script>
+const crew=[
+ {n:"Marcos",sk:"#d9a679",hr:"buzz",beard:"stubble",gl:1,scar:0,cig:1},
+ {n:"Alejandro FHT",sk:"#c88b5e",hr:"slick",beard:"goatee",gl:0,scar:1,tat:1},
+ {n:"Bobueno",sk:"#e8be96",hr:"cap",beard:"full",gl:1,gold:1},
+ {n:"Sandra",sk:"#e2b08a",hr:"long",f:1,gl:1,lip:1},
+ {n:"Ángela",sk:"#c98d66",hr:"bun",f:1,gl:0,lip:1,scar:1},
+ {n:"Pepe",sk:"#e5b88f",hr:"bald",beard:"full",gl:0,cig:1,gold:1},
+ {n:"Varo",sk:"#b97d52",hr:"band",beard:"stubble",gl:1,tat:1},
+ {n:"Jorge",sk:"#dcae85",hr:"slick",beard:"stache",gl:0,scar:1,cig:1},
+ {n:"Coexito",sk:"#d3a075",hr:"cap",beard:"goatee",gl:1,gold:1,tat:1}
+];
+function face(p,i){
+ const s=p.sk,k="#000",hc=["#0d0d0d","#2a1608","#141414"][i%3];
+ let h="",b="",e="",m="",x="";
+ const L=`<path d="M60 18C42 18 31 32 31 52v6C31 74 40 92 60 94c20-2 29-20 29-36v-6C89 32 78 18 60 18z" fill="${s}" stroke="${k}" stroke-width="3.5"/>`;
+ const sh=`<path d="M60 18C42 18 31 32 31 52v6C31 74 40 92 60 94 50 80 52 40 60 18z" fill="#000" opacity=".38"/><path d="M33 66Q42 88 60 94" fill="none" stroke="#000" stroke-width="2" opacity=".5"/>`;
+ const neck=`<path d="M46 86v16h28V86" fill="${s}" stroke="${k}" stroke-width="3.5"/><path d="M46 92h12v10H46z" fill="#000" opacity=".35"/>`;
+ const body=`<path d="M0 150Q4 104 46 100l14 16 14-16Q116 104 120 150z" fill="${p.f?'#1d1d1d':'#2e3b2e'}" stroke="${k}" stroke-width="3.5"/><path d="M46 100l14 16 14-16" fill="#b00018" stroke="${k}" stroke-width="3"/>`;
+ if(p.hr==="buzz")h=`<path d="M31 50C30 24 44 14 60 14s30 10 29 36C84 34 72 28 60 28S36 34 31 50z" fill="${hc}" stroke="${k}" stroke-width="3"/>`;
+ if(p.hr==="slick")h=`<path d="M30 54C26 22 46 10 62 12c20 1 30 16 28 42-6-16-14-22-30-22S36 38 30 54z" fill="${hc}" stroke="${k}" stroke-width="3"/><path d="M42 24Q60 16 82 28M38 32Q60 22 86 36" stroke="#444" stroke-width="2" fill="none"/>`;
+ if(p.hr==="cap")h=`<path d="M29 46C28 20 44 8 60 8s32 12 31 38Q60 36 29 46z" fill="#2f5a2f" stroke="${k}" stroke-width="3.5"/><path d="M26 47Q60 36 94 47" fill="none" stroke="${k}" stroke-width="6"/><polygon points="60,13 63,21 72,21 65,27 68,35 60,30 52,35 55,27 48,21 57,21" fill="#f2c200" stroke="${k}" stroke-width="1.6"/>`;
+ if(p.hr==="band")h=`<path d="M30 48C29 24 44 14 60 14s31 10 30 34Q60 38 30 48z" fill="${hc}" stroke="${k}" stroke-width="3"/><path d="M29 38Q60 28 91 38l1 12Q60 40 29 50z" fill="#b00018" stroke="${k}" stroke-width="3"/><path d="M91 40l14 8-12 4" fill="#b00018" stroke="${k}" stroke-width="2.5"/>`;
+ if(p.hr==="long")h=`<path d="M60 12C34 12 24 34 26 66c1 22-2 40-8 56h26V90C34 80 32 64 32 52c10-4 22-14 28-22 6 8 18 18 28 22 0 12-2 28-12 38v32h26c-6-16-9-34-8-56 2-32-8-54-34-54z" fill="${hc}" stroke="${k}" stroke-width="3.5"/>`;
+ if(p.hr==="bun")h=`<circle cx="60" cy="9" r="11" fill="${hc}" stroke="${k}" stroke-width="3"/><path d="M30 52C28 24 44 16 60 16s32 8 30 36C80 40 72 32 60 32S40 40 30 52z" fill="${hc}" stroke="${k}" stroke-width="3"/>`;
+ if(p.hr==="bald")h=`<path d="M40 30Q60 20 80 30" stroke="#fff" stroke-width="5" opacity=".25" fill="none" stroke-linecap="round"/>`;
+ if(p.beard==="stubble")b=`<path d="M33 62C36 86 46 94 60 94s24-8 27-32c-8 18-16 22-27 22S41 80 33 62z" fill="#000" opacity=".55"/>`;
+ if(p.beard==="full")b=`<path d="M31 56C32 86 42 98 60 98s28-12 29-42c-6 14-10 18-16 22-8-4-18-4-26 0-6-4-10-8-16-22z" fill="${hc}" stroke="${k}" stroke-width="3"/>`;
+ if(p.beard==="goatee")b=`<path d="M46 80Q60 74 74 80L70 98Q60 104 50 98z" fill="${hc}" stroke="${k}" stroke-width="3"/>`;
+ if(p.beard==="stache")b=`<path d="M42 74Q60 64 78 74Q60 70 42 74z" fill="${hc}" stroke="${k}" stroke-width="4"/>`;
+ const brow=`<path d="M34 42L54 50M86 42L66 50" stroke="${p.f?'#111':hc}" stroke-width="${p.f?5:7.5}" stroke-linecap="round"/><path d="M34 42L54 50M86 42L66 50" stroke="#000" stroke-width="1.2"/>`;
+ if(p.gl)e=`<path d="M32 50h24c1 10-4 18-12 18S31 62 32 50zM64 50h24c1 12-4 18-12 18S63 62 64 50z" fill="#050505" stroke="${k}" stroke-width="3"/><path d="M56 53h8M34 52h-6M86 52h6" stroke="${k}" stroke-width="3"/><path d="M36 54l10 -2M68 54l10 -2" stroke="#fff" stroke-width="2" opacity=".5"/>`;
+ else e=`<path d="M36 55q8-6 17 0q-8 7-17 0zM67 55q8-6 17 0q-8 7-17 0z" fill="#fff" stroke="${k}" stroke-width="2.5"/><circle cx="46" cy="55" r="3.6" fill="#000"/><circle cx="75" cy="55" r="3.6" fill="#000"/><path d="M34 60q10 6 20 0M66 60q10 6 20 0" fill="none" stroke="#000" stroke-width="2" opacity=".5"/>`;
+ const nose=`<path d="M60 56v14q-6 4-9 1M60 70q6 4 9 1" fill="none" stroke="#000" stroke-width="2.6" opacity=".75"/>`;
+ m=`<path d="M44 82Q60 74 76 82" fill="none" stroke="${k}" stroke-width="4.5" stroke-linecap="round"/>${p.gold?'<path d="M50 80l3 5 4-5" fill="#f2c200" stroke="#000" stroke-width="1.6"/>':''}${p.lip?'<path d="M45 80Q60 72 75 80Q60 88 45 80z" fill="#8a0014" stroke="#000" stroke-width="2.5"/>':''}<path d="M40 76Q36 84 40 90M80 76Q84 84 80 90" fill="none" stroke="#000" stroke-width="2" opacity=".5"/>`;
+ if(p.scar)x+=`<path d="M78 34L70 70M74 44l8 2M73 54l8 2M71 63l8 2" stroke="#7a0010" stroke-width="2.6" fill="none"/>`;
+ if(p.tat)x+=`<path d="M48 100q6 8 12 0q6 8 12 0" fill="none" stroke="#111" stroke-width="3"/><path d="M50 108q10 6 20 0" fill="none" stroke="#111" stroke-width="2.5"/>`;
+ if(p.cig)x+=`<path d="M72 82l26 3" stroke="#eee" stroke-width="4.5" stroke-linecap="round"/><path d="M96 85l4 .3" stroke="#f60" stroke-width="4.5"/><path d="M102 80q-6-8 2-14q6-6 0-14" fill="none" stroke="#fff" stroke-width="2.6" opacity=".6"/>`;
+ if(p.f&&p.hr!=="long")x+=`<circle cx="31" cy="68" r="5" fill="none" stroke="#f2c200" stroke-width="2.5"/>`;
+ if(p.f&&p.hr==="long")x+=`<circle cx="31" cy="68" r="6" fill="none" stroke="#f2c200" stroke-width="2.5"/><circle cx="89" cy="68" r="6" fill="none" stroke="#f2c200" stroke-width="2.5"/>`;
+ return `<svg viewBox="0 0 120 150" role="img" aria-label="Retrato de ${p.n}">${body}${neck}${p.hr==="long"?h:""}${L}${sh}${b}${p.hr!=="long"?h:""}${e}${brow}${nose}${m}${x}</svg>`;
+}
+document.getElementById("crewGrid").innerHTML=crew.map((p,i)=>`<div class="card"><div class="top">BUSCADO Nº ${i+1}</div><div class="pic">${face(p,i)}</div><div class="nm">${p.n}</div><div class="st">★★★★★</div><div class="bt">Peligro: hotpot</div></div>`).join("");
+
+const M=[
+{n:"Misión 1 · Shanghái",zh:"上海",d:"1–4 julio",x:"3 días",why:"Toma de la ciudad del futuro. Rascacielos, río y comida para pasar el jet lag a base de bocados.",
+ days:[["1 jul","Aterrizaje, hotel y paseo nocturno por Nanjing Road."],["2 jul","El Bund de día, Jardín Yu, Ciudad Vieja y tarde por la Concesión Francesa."],["3 jul","Pudong: Torre de Shanghái y Lujiazui. Tarde en Zhujiajiao, el pueblo de los canales, o Tianzifang."],["4 jul","Mañana libre y vuelo a Zhangjiajie."]],
+ loot:"Xiaolongbao (dumplings de sopa), crucero nocturno por el Huangpu, luces de Lujiazui desde el Bund."},
+{n:"Misión 2 · Zhangjiajie",zh:"张家界",d:"4–7 julio",x:"3 días",why:"Las montañas de Avatar. Tres días enteros, porque cada parque es una jornada de caminata y vértigo.",
+ days:[["4 jul","Llegada por la tarde y cena en la ciudad."],["5 jul","Montaña Tianmen: las 99 curvas, la Puerta del Cielo y la pasarela de cristal pegada a la pared."],["6 jul","Parque Wulingyuan: Montañas Aleluya (Avatar), ascensor Bailong y arroyo Golden Whip."],["7 jul","Gran Cañón y su puente de cristal. Por la tarde, traslado a Furong."]],
+ loot:"Foto en las Montañas Aleluya, teleférico de Tianmen, cruzar el puente de cristal sin mirar abajo."},
+{n:"Misión 3 · Furong",zh:"芙蓉镇",d:"7–9 julio",x:"2 días",why:"Un pueblo tujia colgado sobre una cascada. Descanso táctico antes del asalto final.",
+ days:[["7 jul","Llegada al atardecer y primer paseo con el pueblo iluminado."],["8 jul","Cascada de Furong, calles de piedra, mercados y comida tujia. Tarde tranquila junto al río."],["9 jul","Mañana libre y traslado a Chongqing (unas horas de tren o autobús)."]],
+ loot:"Tofu de arroz (la especialidad local), vistas nocturnas desde el puente, el pueblo vacío a primera hora."},
+{n:"Misión 4 · Chongqing",zh:"重庆",d:"9–16 julio",x:"7 días",why:"El cuartel general. Ciudad de ciencia ficción, cultura y tres excursiones potentes. Hay de sobra para una semana.",
+ days:[["9 jul","Llegada de noche y primera cena."],["10 jul","Hongyadong, Jiefangbei y Liziba (el metro que atraviesa un edificio)."],["11 jul","Excursión a los Grabados Rupestres de Dazu, Patrimonio de la Humanidad."],["12 jul","Excursión a Wulong: puentes naturales y cañones kársticos."],["13 jul","Ciqikou, teleférico sobre el Yangtsé y mirador de Nanshan de noche."],["14 jul","Crucero por el Yangtsé o excursión a Fengdu, la «ciudad de los fantasmas»."],["15 jul","Hotpot de despedida, compras y última noche."],["16 jul","Vuelo de vuelta."]],
+ loot:"Hotpot de sebo picante, fideos xiaomian, la ciudad en 3D de noche, el Yangtsé desde el teleférico."}
+];
+document.getElementById("missions").innerHTML=M.map(m=>`<article class="m"><header><h3>${m.n}</h3><span class="z">${m.zh}</span></header><div class="meta"><b>${m.d}</b><b>${m.x}</b></div><p class="why">${m.why}</p><ul>${m.days.map(a=>`<li><i>${a[0]}</i><span>${a[1]}</span></li>`).join("")}</ul><div class="loot"><b>Botín:</b> ${m.loot}</div></article>`).join("");
+</script>
+</body>
+</html>
